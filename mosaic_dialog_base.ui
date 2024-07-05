@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MosaicDialog</class>
+ <widget class="QDialog" name="MosaicDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>500</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Mosaic Tool</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QListWidget" name="raster_list">
+     <property name="selectionMode">
+      <enum>QAbstractItemView.MultiSelection</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="buttons_layout">
+     <item>
+      <widget class="QPushButton" name="open_raster_button">
+       <property name="text">
+        <string>Open Bands</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="select_all_button">
+       <property name="text">
+        <string>Select/Unselect All</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="remove_button">
+       <property name="text">
+        <string>Remove</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QCheckBox" name="open_output_checkbox">
+     <property name="text">
+      <string>Do you want to open the output in QGIS Interface?</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="output_path_layout">
+     <item>
+      <widget class="QLabel" name="output_label">
+       <property name="text">
+        <string>Output File:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="output_file"/>
+     </item>
+     <item>
+      <widget class="QPushButton" name="browse_button">
+       <property name="text">
+        <string>Browse</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="input_mode_layout">
+     <item>
+      <widget class="QLabel" name="input_mode_label">
+       <property name="text">
+        <string>Input Mode:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="input_mode">
+       <item>
+        <property name="text">
+         <string>Single Band</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Multiple Bands</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="algorithm_layout">
+     <item>
+      <widget class="QLabel" name="algorithm_label">
+       <property name="text">
+        <string>Computation Algorithm:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="algorithm">
+       <item>
+        <property name="text">
+         <string>median</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>mean</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>gmean</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>max</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>min</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>std</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>valid_pixels</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>last_pixel</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>jday_last_pixel</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>jday_median</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>linear_trend</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QCheckBox" name="show_advanced_options_checkbox">
+     <property name="text">
+      <string>Show Advanced Options</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QWidget" name="advanced_options">
+     <layout class="QVBoxLayout" name="advanced_options_layout">
+      <item>
+       <layout class="QHBoxLayout" name="data_type_layout">
+        <item>
+         <widget class="QLabel" name="data_type_label">
+          <property name="text">
+           <string>Output Data Type:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="data_type">
+          <item>
+           <property name="text">
+            <string>Default</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Byte</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>UInt16</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Int16</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>UInt32</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Int32</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Float32</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Float64</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="band_layout">
+        <item>
+         <widget class="QLabel" name="band_label">
+          <property name="text">
+           <string>Band:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSpinBox" name="band">
+          <property name="minimum">
+           <number>1</number>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="run_button">
+     <property name="text">
+      <string>Mosaic</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="cancel_button">
+     <property name="text">
+      <string>Cancel</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
