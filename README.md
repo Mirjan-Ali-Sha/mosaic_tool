@@ -1,4 +1,4 @@
-# mosaic_tool
+# Mosaic Tool
 A plugin to mosaic bands/Images from selected raster layers. Follow The Steps below;
 1. Open your all bands in QGIS Interface or click on 'Open Bands' button and open all band images which images are you wants to stack.
 2. Click on "Mosaic Tool" tool (under 'MAS Raster Processing' toolbox) or 'Raster' menu --> 'MAS Raster Processing' menu item --> 'Mosaic Tool'.
