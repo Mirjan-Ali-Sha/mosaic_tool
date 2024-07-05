@@ -155,6 +155,7 @@ class Ui_MosaicDialog(object):
         self.algorithm_label.setText(_translate("MosaicDialog", "Computation Algorithm:"))
         self.show_advanced_options_checkbox.setText(_translate("MosaicDialog", "Show Advanced Options"))
         self.data_type_label.setText(_translate("MosaicDialog", "Output Data Type:"))
-        self.band_label.setText(_translate("MosaicDialog", "Band:"))
+        self.band_label.setText(_translate("MosaicDialog", "No of Output Band/s:"))
         self.run_button.setText(_translate("MosaicDialog", "Mosaic"))
         self.cancel_button.setText(_translate("MosaicDialog", "Cancel"))
+ 

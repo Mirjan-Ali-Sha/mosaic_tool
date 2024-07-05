@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>500</width>
+    <width>600</width>
     <height>600</height>
    </rect>
   </property>
@@ -239,7 +239,7 @@
         <item>
          <widget class="QLabel" name="band_label">
           <property name="text">
-           <string>Band:</string>
+           <string>No of Output Band/s:</string>
           </property>
          </widget>
         </item>
